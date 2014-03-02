@@ -20,15 +20,13 @@
 
 + (NSString *) baseURL {
 
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    return (NSString *) [userDefaults objectForKey:BASE_URL_KEY];
+    return (NSString *) [[NSBundle mainBundle] objectForInfoDictionaryKey:BASE_URL_KEY];
     
 }
 
 + (NSString *) appCode {
     
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    return (NSString *) [userDefaults objectForKey:APP_CODE_KEY];
+    return (NSString *) [[NSBundle mainBundle] objectForInfoDictionaryKey:APP_CODE_KEY];
     
 }
 
