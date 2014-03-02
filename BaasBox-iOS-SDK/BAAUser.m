@@ -198,7 +198,8 @@
     
     NSArray *exclude = @[@"authenticationToken", @"pushNotificationToken", @"pushEnabled", @"roles"];
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
-    NSUInteger propertiesCount;
+    unsigned int propertiesCount;
+
     objc_property_t *propertyList = class_copyPropertyList([self class], &propertiesCount);
     
     for (int i = 0 ; i < propertiesCount; i++) {
